@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import React, { useState } from 'react';
+import {StyleSheet, Text, View, FlatList} from 'react-native';
+import React, {useState} from 'react';
 import products_data from "./products_data.json"
 import SearchBar from './SearchBar/SearchBar';
 import ProductList from './ProductList/ProductList';
@@ -15,7 +15,7 @@ const App = () => {
       const searchedText = text.toLowerCase()
       const currentTitle = product.title.toLowerCase()
 
-      //searchedText currentTitle ın içinde varsa yani değeri -1 den büyükse döndürür
+
       return currentTitle.indexOf(searchedText) > -1
     })
     setProducts(filteredList)
